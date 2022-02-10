@@ -915,7 +915,7 @@ label {
 	justify-content: flex-end;
 }
 .testimonial-item {
-	padding: 0 50px;
+	padding: 0 40px;
 }
 
 .rugby-testimonial-content {
@@ -923,9 +923,9 @@ label {
 	background: #fff;
 	flex-wrap: wrap;
 	position: relative;
-	padding: 15px 15px 30px 85px;
+	padding: 15px 15px 30px 60px;
 }
-.rugby-testimonial-content:before {content: "";position: absolute;width: 100px;height: 5px;background: #e41b7b;left: -50px;top: 50%;}
+.rugby-testimonial-content:before {content: "";position: absolute;width: 80px;height: 5px;background: #e41b7b;left: -40px;top: 50%;}
 .rugby-testimonial-box-content {
 	width: calc(100% - 110px);
 }
@@ -946,6 +946,8 @@ label {
 .rugby-testimonial-box-description {
 	color: #777;
 	padding-right: 20px;
+	font-size: 14px;
+	margin-bottom: 0;
 }
 
 .rugby-testimonial-box-img:after {content: "";position: absolute;width: 110px;height: 110px;border: 1px solid #e41b7b;border-top: 0;border-left: 0;bottom: -5px;right: -30px;}
