@@ -1,0 +1,1038 @@
+:root {
+	--dc-font-family-primary: 'Montserrat', sans-serif;
+	--dc-font-size-text: 14px;
+	--dc-font-size-title-large: 40px;
+	--dc-font-size-title-md: 32px;
+	--dc-font-size-title-sm: 24px;
+	--dc-font-weight-title: bold;
+	--dc-font-weight-button: 500;
+	--dc-font-weight-body: 400;
+}
+
+body {
+	margin: 0;
+	font-family: var( --dc-font-family-primary );
+	color: var( --dc-text-body-color );
+	line-height: 1.6;
+	font-weight: var( --dc-font-weight-body );
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	background-repeat: no-repeat;
+	position: relative;
+	min-height: 100vh;
+	background: #000;
+	font-size: 15px;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+}
+img {
+	width: 100%;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+label {
+	display: inline-block;
+	font-weight: 300;
+}
+/*------------------------- Preloader Css ---------------------------*/
+
+
+/*HOME PAGE*/
+
+.rugby-fs-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 110000;
+	overflow: hidden;
+	transition: all 400ms ease-out;
+	transform: translate3d(0, 0, 1px);
+	background: rgb(255 255 255 / 75%);
+	backdrop-filter: blur(7px);
+	opacity: 0;
+	visibility: hidden;
+}
+.rugby-fs-popup:after, .rugby-fs-popup:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+.rugby-fs-popup.open {
+	opacity: 1;
+	visibility:visible;
+}
+.rugby-fs-popup:before {
+	z-index: 2;
+}
+.rugby-fs-popup .rugby-panel-close {
+	position: absolute;
+	left: 0;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	margin: 15px;
+	padding: 6px;
+	cursor: pointer;
+	z-index: 200;
+	transition: border-color 0.3s ease;
+}
+.rugby-fs-popup .rugby-panel-close .rugby-cross-symbol {
+	width: 100%;
+	height: 100%;
+	top: 8px;
+	position: relative;
+}
+.rugby-cross-symbol:before, 
+.rugby-cross-symbol:after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 5px;
+	width: 100%;
+	transform: rotate(45deg);
+	background-color: #000;
+}
+.rugby-cross-symbol:before {
+	transform: rotate(45deg);
+}
+.rugby-cross-symbol:after {
+	transform: rotate(-45deg);
+}
+.rugby-fs-popup .rugby-fs-menu, 
+.rugby-fs-popup .rugby-fs-menu.rugby-middle-aligned {
+	top: 50%;
+	margin: 0 auto;
+	max-height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	transform: translateY(-50%);
+}
+.rugby-fs-popup .rugby-fs-menu {
+	position: relative;
+	z-index: 11;
+}
+.rugby-master-menu {
+	position: relative;
+}
+.rugby-master-menu .menu-item {
+	position: relative;
+	display: block;
+	clear: both;
+	width: 100%;
+	box-sizing: content-box;
+	text-align:center;
+	padding: 0.5rem 0;
+}
+.rugby-master-menu .menu-item .rugby-item-content {
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: #000000;
+	transition:.5s;
+}
+.rugby-master-menu .rugby-submenu .rugby-item-content {
+	color: #fff;
+}
+.rugby-master-menu .menu-item .rugby-item-content:hover {
+	color:#E41F7B;
+}
+.rugby-master-menu .menu-item .rugby-item-content .fa-plus {
+	font-size: 18px;
+}
+
+.rugby-submenu {
+	display: none;
+	overflow: hidden;
+	background: #000000;
+	padding: 1.5rem;
+}
+.navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	transition: .5s;
+	padding: 25px;
+	background: rgb(0 0 0 / 41%);
+	backdrop-filter: blur(6px);
+}
+.rugby-header {
+	position: relative;
+}
+.rugby-burger[class*="large"] {
+	width: 34px;
+}
+.rugby-burger {
+	position: relative;
+	cursor: pointer;
+}
+.rugby-burger .mid-line, .rugby-burger::before, .rugby-burger::after {
+	width: 100%;
+	content: "";
+	display: block;
+	border-bottom: solid;
+	box-sizing: border-box;
+	border-color: #fff;
+	transition: all 300ms;
+}
+.rugby-burger.rugby-thick-large .mid-line {
+	margin: 10px 0;
+}
+.rugby-burger[class*="thick"] .mid-line, .rugby-burger[class*="thick"]::before, .rugby-burger[class*="thick"]::after {
+	border-width: 4px;
+}
+.rugby-burger::before {
+	border-top: solid;
+	border-bottom: none;
+	border-color: #fff;
+	transform-origin: 0 0%;
+}
+.rugby-burger::after {
+	bottom: 0;
+	transform-origin: 0 100%;
+}
+.btn-ui-contact {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: #FFFFFF;
+	border: 1px solid #fff;
+	background: none;
+}
+
+.rugby-btn {
+	font-family: Cormorant SC;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	height: 50px;
+	padding: 0 2rem;
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+
+.align-self-center {
+	align-items: center;
+}
+
+.d-flex {
+	flex-wrap: wrap;
+}
+
+.banner-area {
+	position: relative;
+}
+
+.banner-items-middle {
+	position: relative;
+}
+
+.banner-content {
+	position: relative;
+}
+
+.banner-image {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: top right;
+}
+
+.rugby-widget-modern-heading {
+	position: absolute;
+	width: 45%;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.39);
+	backdrop-filter: blur(15px);
+	padding-left: 155px;
+}
+
+.rugby-widget-inner {
+	position: relative;
+	color: #fff;
+	height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.rugby-modern-heading-primary {
+	font-family: Playfair Display;
+	font-style: normal;
+	line-height: 113px;
+	color: #FFFFFF;
+	font-size: 85px;
+	font-weight: 500;
+	letter-spacing: 4px;
+	margin: 80px 0px 40px 0px;
+	max-width: 1082px;
+}
+
+.rugby-modern-heading-description {
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.7);
+	max-width: 420px;
+	font-weight: 400;
+	line-height: 22px;
+}
+.bottom-15 {
+	position: absolute;
+	bottom: 1.5rem;
+	right: 1.5rem;
+}
+
+.rugby-button {
+	position: relative;
+	background: #fff;
+	font-size: 20px;
+	line-height: 24px;
+	color: #000;
+	font-weight: 600;
+	transition: .5s;
+	height: 58px;
+	padding-right: 70px;
+	/* max-width: 355px; */
+}
+
+.rugby-button .rugby-icon {
+	position: absolute;
+	line-height: 44px;
+	color: #fff;
+	margin-left: 10px;
+	width: 44px;
+	right: 4px;
+
+}
+.rugby-icon .fa-long-arrow-right {
+	animation: bounceLeft 1s infinite;
+	animation-direction: alternate;
+}
+.fa-phone-alt {
+	animation: scale5 1s infinite;
+	animation-direction: alternate;
+}
+.rugby-button:before {
+	content: "";
+	height: 50px;
+	background: #e41f7b;
+	position: absolute;
+	right: 4px;
+	width: 44px;
+	transition: .5s;
+}
+
+.rugby-button:hover::before {
+	width: calc(100% - 8px);
+}
+
+.rugby-button span {
+	position: relative;
+}
+
+.rugby-button:hover {
+	color: #fff;
+}
+.rugby-secondary {
+	background: none;
+	border: 1px solid #fff;
+	color: #e41f7b;
+	padding-left: 70px;
+	padding-right: 2rem;
+}
+
+.rugby-secondary .rugby-icon.bg-none {
+	right: auto;
+	left: 4px;
+	margin-left: 0;
+}
+
+.rugby-secondary:before {
+	left: 4px;
+}
+.rugby-third {
+	background: transparent;
+	border: 1px solid #fff;
+	color: #ffff;
+	text-transform: uppercase;
+}
+
+.rugby-third.rugby-button:before {
+	width: 0;
+}
+
+.rugby-third.rugby-button:hover:before {
+	width: calc(100% - 8px);
+}
+
+.rugby-third span.rugby-icon {
+	color: #e41f7b;
+	font-size: 30px;
+}
+
+.rugby-third:hover span.rugby-icon {
+	color: #fff;
+}
+.banner-area .slick-prev {
+	bottom: 0;
+	top: auto;
+	left: 200px;
+	font-size: 35px;
+	color: #fff;
+	width: auto;
+	height: auto;
+	line-height: 30px;
+	padding: 10px;
+}
+
+.banner-area .slick-next {
+	bottom: 0;
+	top: auto;
+	left: 265px;
+	right: auto;
+	font-size: 25px;
+	color: #fff;
+	width: auto;
+	height: auto;
+	line-height: 35px;
+	padding: 10px;
+}
+
+.banner-area .slick-prev:before, 
+.banner-area .slick-next:before {
+	display: none;
+}
+.slick-active .rugby-modern-heading-primary  {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: fadeInDown;
+	animation-delay: 0.3s;
+}
+.slick-active .rugby-modern-heading-description  {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: fadeInDown;
+	animation-delay: 0.3s;
+}
+
+
+.rugby-parallax-section {
+	position: relative;
+	padding: 105px 25px;
+}
+
+.rugby-widget-modern-title {
+	max-width: 760px;
+	text-align: center;
+	position: relative;
+	margin: 0 auto 50px;
+}
+
+.rugby-modern-title {
+	font-size: 26px;
+	line-height: 32px;
+	text-align: center;
+	color: #FFFFFF;
+	opacity: 0.75;
+	font-weight: 400;
+}
+
+.rugby-modern-description {
+	font-family: Cormorant SC;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 61px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.rugby-widget-slick {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+.rugby-slick-item {
+	padding: 15px;
+	width: 33.333%;
+	transform: scale(0.75);
+	position: relative;
+}
+
+.rugby-slick-item.active {transform: scale(1);}
+
+.rugby-image-box-wrapper {
+	position: relative;
+	transition: .5s;
+}
+
+.rugby-image-box-img {
+	position: relative;
+	margin: 0;
+	transition: .5s;
+}
+
+.rugby-image-box-img:before {
+	content: "";
+	background: #E41F7B;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.rugby-image-box-img:after {
+	content: "";
+	position: absolute;
+	top: 25px;
+	left: 15px;
+	right: 15px;
+	bottom: 25px;
+	border: 1px solid #fff;
+	transition: .3s;
+}
+
+.rugby-image-box-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 30px;
+	text-align: center;
+	color: #fff;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.rugby-image-box-description {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	transform: translateY(100px);
+	transition: .5s;
+	opacity: 0;
+}
+
+.rugby-image-box-title {
+	font-family: Cormorant SC;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 38px;
+	line-height: 38px;
+	text-align: center;
+	transform: translateY(45px);
+	transition: .5s;
+}
+
+.rugby-slick-item.active .rugby-image-box-description {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.rugby-slick-item.active .rugby-image-box-content {
+	height: auto;
+}
+
+.rugby-slick-item.active .rugby-image-box-img::before, .rugby-image-box-wrapper:hover .rugby-image-box-img::before {
+	background: linear-gradient(180deg, rgba(228, 31, 123, 0) 0%, #E41F7B 54.17%);
+	top: auto;
+	height: 235px;
+	mix-blend-mode: normal;
+}
+
+.rugby-slick-item.active .rugby-image-box-img::after, .rugby-image-box-wrapper:hover .rugby-image-box-img::after {
+	top: -25px;
+	border-bottom: 0;
+	border-color: #e41f7b;
+	transition: .5s;
+}
+.rugby-image-box-wrapper:hover .rugby-image-box-title {
+	transform: translateY(0);
+}
+
+.rugby-image-box-wrapper:hover .rugby-image-box-description {
+	transform: translateY(0);opacity: 1;
+}
+
+.rugby-slick-item.active .rugby-image-box-title {
+	transform: translateY(0px);
+}
+.text-left {
+	text-align: left !important;
+}
+.rugby-desc-box-wrapper {
+	position: relative;
+	transform: translateX(-140px);
+	top: 30px;
+	margin-bottom: 50px;
+}
+.rugby-desc-box-card {
+	background: #fff;
+	padding: 30px 30px 30px 45px;
+	position: relative;
+}
+
+.rugby-desc-box-wrapper:before {
+	content: "";
+	position: absolute;
+	width: 117px;
+	height: 180px;
+	background: #E41F7B;
+	right: -60px;
+	bottom: -30px;
+	animation: bounce 5s infinite;
+	animation-direction: alternate;
+}
+.rugby-desc-box-wrapper:after {
+	content: "";
+	position: absolute;
+	top: -15px;
+	bottom: -15px;
+	left: 25px;
+	right: -90px;
+	border: 2px solid #e41f7b;
+}
+.rugby-wiget-about-image {
+	position: relative;
+}
+
+.rugby-wiget-figure {
+	position: relative;
+	padding: 50px 20px 50px;
+	text-align: right;
+}
+
+.rugby-wiget-figure img {
+	max-width: 450px;
+	transform: translateY(30px);
+	position: relative;
+}
+
+.figure-line {
+	position: relative;
+	z-index: 1;
+}
+
+.figure-line:before {
+	content: "";
+	position: absolute;
+	left: -50px;
+	height: 4px;
+	background: #e41f7b;
+	top: 0;
+	width: 320px;
+	animation: leftRight 5s infinite;
+	animation-direction: alternate;
+}
+
+.figure-line:after {
+	content: "";
+	position: absolute;
+	height: 490px;
+	width: 4px;
+	background: #e41f7b;
+	top: 0;
+	left: -50px;
+	animation: upDown 4s infinite;
+	animation-direction: alternate;
+}
+
+@keyframes leftRight {
+	0% {
+		width: 0px;  
+	}
+	100% {
+		width: 320px;  
+	}
+}
+@keyframes upDown {
+	0% {
+		height: 0px;  
+	}
+	100% {
+		height: 490px;  
+	}
+}
+@keyframes bounceLeft {
+	0% {
+		padding-left: 0px;  
+	}
+	100% {
+		padding-left: 5px;  
+	}
+}
+@keyframes scale5 {
+	0% {
+		transform: scale(0.8);  
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.figure-bottom-left {
+	position: absolute;
+	left: 85px;
+	width: 275px;
+	height: 380px;
+	background: #e41f7b;
+	bottom: -70px;
+	border-radius: 0;
+}
+.rugby-wiget-figure-image {
+	position: relative;
+	display: inline-flex;
+}
+
+.rugby-wiget-figure-image:before {
+	position: absolute;content: "";
+	bottom: -30px;
+	left: 0;
+	width: 154px;
+	height: 283px;
+	background: #e41f7b;
+	mix-blend-mode: multiply;
+	z-index: 1;
+	border-radius: 0 160px 0 0;
+}
+.ty-3 {
+	transform: translateX(-100px);
+}
+.rugby-background-overlay {
+	padding: 75px 20px;
+	position: relative;
+	background-image: url(../images/image-6.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.rugby-our-service {
+	position: relative;
+}
+
+.rugby-our-service .rugby-modern-heading-primary {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.rugby-our-service .rugby-modern-heading-description {
+	margin: 0 auto;
+	width: 100%;
+	font-size: 20px;
+	line-height: 24px;
+	max-width: 100%;
+	text-align: center;
+}
+.rugby-background-mutilple {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #e41f7b;
+	mix-blend-mode: multiply;
+}
+
+.rugby-media-hint-frame {
+	position: relative;
+}
+
+.rugby-media-image {
+	position: relative;
+	padding: 10px 30px;
+	border: 1px solid #e41f7b;
+}
+.bottom-left-rectanger {
+	position: absolute;
+	bottom: -30px;
+	left: -38px;
+	width: 85px;
+	height: 58px;
+	background: #F59BB6;
+}
+.top-right-rectanger {
+	position: absolute;
+	top: -25px;
+	right: 30px;
+	background: #F59BB6;
+	width: 65px;
+	height: 43px;
+}
+.rugby-widget-container {
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	padding: 0 25px;
+}
+
+.rugby-divider {
+	position: relative;
+	width: 45%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 300;
+	padding-bottom: 10px;
+}
+.rugby-service-info {
+	width: 55%;
+	text-align: right;
+}
+
+.rugby-divider span {
+	position: relative;
+}
+
+.rugby-divider span:before {content: "";position: absolute;width: 400px;right: 0;bottom: -10px;background: #fff;height: 3px;}
+
+.rugby-service-heading-primary {
+	color: #E41F7B;
+	font-family: Cormorant SC;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 61px;
+}
+
+.rugby-service-heading-description {
+	font-size: 15px;
+	font-weight: 400;
+}
+.text-right {
+	display: flex;
+	justify-content: flex-end;
+}
+.service-line:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 2px;
+	background: #fff;
+	width: 100%;
+	animation: rightLeft 5s infinite;
+	animation-direction: alternate;
+}
+
+.service-line:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 150px;
+	background: #fff;
+	width: 2px;
+	animation: downUp 5s infinite;
+	animation-direction: alternate;
+}
+@keyframes rightLeft {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes downUp {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 150px;
+	}
+}
+
+.clip-path-x {
+	clip-path: polygon(0 8%, 111% 0, 135% 100%, 0% 92%);
+	transition: .5s;
+}
+.clip-path-x:hover {
+	clip-path: polygon(0 0, 130% 8%, 100% 89%, 0% 95%);
+}
+.rugby-widget-container.service-odd {
+	flex-direction: row-reverse;
+}
+
+.rugby-widget-container.service-odd .rugby-service-info {
+	text-align: left;
+}
+
+.rugby-widget-container.service-odd .rugby-divider span:before {
+	right: auto;
+	left: 0;
+	z-index: 1;
+}
+
+.rugby-widget-container.service-odd .service-line:before {
+	right: auto;
+	left: 0;
+}
+.rugby-widget-container.service-odd .service-line:after {
+	right: auto;
+	left: 0;
+}
+.flex-start {
+	display: flex;
+	justify-content: flex-start;
+}
+.bg-white-3 {
+	background: rgb(255 255 255 / 10%);
+}
+.flex-end {
+	justify-content: flex-end;
+}
+.testimonial-item {
+	padding: 0 50px;
+}
+
+.rugby-testimonial-content {
+	display: flex;
+	background: #fff;
+	flex-wrap: wrap;
+	position: relative;
+	padding: 15px 15px 30px 85px;
+}
+.rugby-testimonial-content:before {content: "";position: absolute;width: 100px;height: 5px;background: #e41b7b;left: -50px;top: 50%;}
+.rugby-testimonial-box-content {
+	width: calc(100% - 110px);
+}
+
+.rugby-testimonial-box-img {
+	width: 100px;
+	margin-left: 10px;
+	position: relative;
+}
+.rugby-testimonial-box-title {
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 41px;
+	color: #E41B7B;
+	position: relative;
+}
+
+.rugby-testimonial-box-description {
+	color: #777;
+	padding-right: 20px;
+}
+
+.rugby-testimonial-box-img:after {content: "";position: absolute;width: 110px;height: 110px;border: 1px solid #e41b7b;border-top: 0;border-left: 0;bottom: -5px;right: -30px;}
+
+.rugby-about-us-content {
+	position: relative;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.box-contact {
+	background: #191919;
+	box-shadow: 2px 6px 24px #E41B7B;
+	padding: 50px;
+}
+.rugby-about-us-info p {
+	font-size: 15px;
+	font-weight: 300;
+}
+.mb-60 {
+	margin-bottom: 60px;
+}
+.text-md-5 {
+	font-size: 50px;
+	line-height: 60px;
+}
+.justify-center {
+	justify-content: center;
+}
+.rugby-footer {
+	position: relative;
+	padding: 70px 20px;
+}
+
+.footer-logo {
+	position: relative;
+}
+
+.footer-logo img {
+	height: 70px;
+	width: auto;
+}
+
+.footer-menu {
+	position: relative;
+}
+
+.footer-menu ul {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.footer-menu ul a {
+	border: 1px solid transparent;
+	color: #fff;
+	opacity: 0.7;
+	padding: 5px 10px;
+	transition: .5s;
+}
+.footer-menu ul a:hover {
+	opacity: 1;
+	border: 1px solid #e41f7b;
+}
+.footer-social {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: #fff;
+}
+
+.footer-social ul {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-left: 10px;
+}
+
+.footer-social ul a {
+	color: #fff;
+	padding: 0 10px;
+}
+.footer-bottom {
+	text-align: center;
+	color: #fff;
+	font-size: 13px;
+	opacity: 0.7;
+}
