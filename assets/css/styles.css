@@ -12,9 +12,9 @@
 body {
 	margin: 0;
 	font-family: var( --dc-font-family-primary );
-	color: var( --dc-text-body-color );
+	color: #444;
 	line-height: 1.6;
-	font-weight: var( --dc-font-weight-body );
+	font-weight: 400;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
 	background-repeat: no-repeat;
@@ -1037,4 +1037,260 @@ label {
 	color: #fff;
 	font-size: 13px;
 	opacity: 0.7;
+}
+
+
+/*Services*/
+
+.site-content {
+	position: relative;
+}
+
+.inner-page-wrap {
+	position: relative;
+}
+
+.rb-breadcrumb-wrap {
+	background-image: url(../images/image-36.png);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 0;
+	padding: 100px 0;
+	position: relative;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rb-breadcrumb-wrap:before {content: "";position: absolute;top: 0;left: 0;right: 0;bottom: 0;background: #E41F7B;mix-blend-mode: multiply;}
+
+.__rb-container__ {
+	position: relative;
+	margin: 0 auto;
+}
+
+.breadcrumb-inner {
+	position: relative;
+	text-align: center;
+	color: #fff;
+}
+
+.rb-breadcrumb {
+	position: relative;
+	font-size: 32px;
+	font-weight: 300;
+}
+
+.page-title {
+	font-family: Cormorant SC;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 73px;
+}
+.inner-service-wrap {
+	position: relative;
+}
+.inner-service-wrap {
+	position: relative;
+}
+
+.rb-service-category {
+	position: relative;
+}
+
+.rb-category-tab {
+	justify-content: center;
+	border-bottom: 0;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+.rb-category-tab .nav-link {
+	font-size: 24px;
+	font-weight: 300;
+	color: #fff;
+	opacity: 0.6;
+	border-radius: 0;
+	transition: .5s;
+	cursor: pointer;
+	border: 0;
+	margin: 0;
+}
+
+.rb-category-tab .nav-link:hover {
+	border: 0;
+	isolation: isolate;
+	opacity: 1;
+}
+
+.rb-category-tab .nav-link.active {
+	background: #e41f7b;
+	opacity: 1;
+	color: #fff;
+	position: relative;
+	border: 0;
+}
+.rb-category-inner {
+	position: relative;
+}
+
+.rb-background {
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	background-size: cover;
+	min-height: 500px;
+}
+
+.cate-service-content {
+	position: relative;
+	padding: 45px;
+	color: #fff;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.cate-service-content:before {content: "";position: absolute;top: 0;left: 0;right: 0;bottom: 0;background: #e41f7b;mix-blend-mode: multiply;}
+.cate-service-content:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border: 1px solid #fff;
+	background: none;
+	z-index: 0;
+}
+.service-menu-subtitle {
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.rugby-price-list {
+	padding: 0;
+	margin: 0;
+}
+
+.rugby-price-list-item {
+	margin-bottom: 15px;
+	display: block;
+}
+
+.rugby-price-list-text {
+	position: relative;
+}
+
+.rugby-price-list-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.rugby-price-list-title {
+	font-family: Cormorant SC;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 32px;
+}
+
+.rugby-price-list-separator {
+	background: #fff;
+	height: 1px;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.rugby-price-list-price {
+	font-family: Cormorant SC;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 32px;
+}
+.service-menu-nav {
+	position: relative;
+	z-index: 1;
+}
+.rugby-price-list.list-col-2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: relative;
+}
+
+.rugby-price-list.list-col-2 .rugby-price-list-item {
+	width: calc(50% - 40px);
+	margin-bottom: 15px !important;
+}
+
+.rugby-price-list.list-col-2:before {
+	content: "";
+	top: 0;
+	left: 50%;
+	width: 1px;
+	bottom:0;
+	position: absolute;
+	background: #fff;
+}
+.rugby-widget-gallery {
+    position: relative;
+    padding: 100px 15px;
+}
+
+.gallery-content {
+    position: relative;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    height: 330px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px solid #000;
+}
+.gallery-item a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-item .img-service {
+    max-height: 330px;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2);
+}
+
+.gallery-list button.slick-prev.slick-arrow {
+    left: -50px;
+}
+
+.gallery-list button.slick-prev.slick-arrow:before {
+    background: none;
+    font-size: 30px;
+}
+.gallery-list button.slick-next.slick-arrow {
+    right: -50px;
+}
+
+.gallery-list button.slick-next.slick-arrow:before {
+    background: none;
+    font-size: 30px;
 }
