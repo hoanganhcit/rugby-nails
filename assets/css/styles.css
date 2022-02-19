@@ -84,12 +84,15 @@ label {
 	cursor: pointer;
 	z-index: 200;
 	transition: border-color 0.3s ease;
+	outline: none;
+	box-shadow: none;
 }
 .rugby-fs-popup .rugby-panel-close .rugby-cross-symbol {
 	width: 100%;
 	height: 100%;
 	top: 8px;
 	position: relative;
+	outline: none;
 }
 .rugby-cross-symbol:before, 
 .rugby-cross-symbol:after {
