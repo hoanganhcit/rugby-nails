@@ -1294,3 +1294,22 @@ label {
     background: none;
     font-size: 30px;
 }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(100px,1fr));
+    grid-gap: 10px;
+}
+
+.gallery-grid .img-service {
+    height: 450px;
+    max-height: 450px;
+}
+
+.gallery-grid .gallery-item {
+    height: 450px;
+    border: 0;
+}
+.align-center {
+    justify-content: center;
+}
