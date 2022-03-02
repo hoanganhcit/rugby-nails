@@ -1,5 +1,5 @@
 @media screen and (max-width: 1366px) {
-	.rugby-modern-heading-primary {
+    .rugby-modern-heading-primary {
         font-size: 60px;
         line-height: 70px;
     }
@@ -15,10 +15,372 @@
         left: -27px;
     }
 }
+@media screen and (max-width: 1024px) {
+    .rugby-widget-modern-heading {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .rugby-modern-heading-primary {
+        font-size: 45px;
+        line-height: 50px;
+        margin-top: 0;
+    }
+
+    .rugby-modern-heading-description {
+        font-size: 14px;
+    }
+
+    .bottom-15 {
+        position: relative;
+        border: 0;
+        right: 0;
+    }
+
+    .rugby-button {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .rugby-button:before {
+        height: 44px;
+    }
+    .figure-bottom-left, .rugby-wiget-figure-image:before {
+        display: none;
+    }
+
+    .figure-line:before, .figure-line:after {
+        left: -20px;
+    }
+
+    .rugby-modern-heading-primary {
+        transform: translateX(0);
+    }
+
+    .rugby-desc-box-wrapper {transform: none;top: 0;}
+    .rugby-media-image img {
+        width: 100% !important;
+    }
+
+    .rugby-desc-box-wrapper:before {
+        display: none;
+    }
+
+    .rugby-desc-box-wrapper:after {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+}
+@media screen and (max-width: 991px) {
+    .banner-image {
+        height: 500px;
+    }
+    .rugby-widget-inner {
+        height: 500px;
+    }
+
+    .rugby-modern-heading-primary {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .rugby-widget-modern-heading {
+        width: 60%;
+        height: 500px;
+    }
+
+    .bottom-15 {
+        margin-top: 25px !important;
+    }
+    .rugby-modern-title {
+        font-size: 20px;
+    }
+    .rugby-modern-description {
+        font-size: 25px;
+        line-height: 1.3;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .rugby-widget-slick {
+        flex-wrap: wrap;
+    }
+    .rugby-image-box-title {
+        font-size: 19px;
+        line-height: 1.3;
+        transform: none;
+    }
+
+    .rugby-image-box-description {
+        display: none;
+    }
+    .rugby-wiget-about-image {
+        display: none;
+    } 
+
+    .rugby-button {
+        padding: 10px 50px 10px 10px;
+    }
+
+    .rugby-widget-container {
+        /* padding-left: 0; */
+    }
+
+    .rugby-divider {
+        width: 100px;
+    }
+
+    .rugby-service-info {
+        width: calc(100% - 120px);
+    }
+    .rugby-service-heading-primary {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    .rugby-divider span:before {
+        display: none;
+    }
+    .footer-logo img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+    .rugby-price-list.list-col-2 .rugby-price-list-item {
+        width: 100%;
+    }
+
+    .rugby-price-list.list-col-2:before {
+        display: none;
+    }
+
+    .rb-category-tab .nav-link {
+        font-size: 20px;
+    }
+
+}
 @media screen and (max-width: 768px) {
-	
+    .footer-logo img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .footer-menu ul a {
+        font-size: 14px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .col-xs-12 {width: 100%;}
+
+    .bottom-left-rectanger {
+        display: none;
+    }
+
+    .clip-path-x {
+        clip-path: none;
+    }
+
+    .rugby-media-image {
+        padding: 30px;
+        margin-bottom: 3rem;
+    }
+
+    .rugby-widget-container {
+        padding: 0;
+    }
+
+    .rugby-divider {
+        display: none;
+    }
+
+    .rugby-service-info {
+        width: 100%;
+        text-align: left;
+    }
+
+    .service-line {
+        display: none;
+    }
+
+    .rugby-service-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .rugby-service-inner .text-right {
+        margin: 15px 0 !important;
+    }
+    .rugby-about-us-content {
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .rugby-about-us-content .rugby-modern-description {
+        margin: 0 0 10px  !important;
+        padding: 0 !important;
+    }
+
+    .box-contact {
+        padding: 30px;
+    }
+
+    .rugby-button {
+        padding: 0 70px 0 20px;
+    }
+
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(3,minmax(100px,1fr));
+    }
+
+    .gallery-grid .img-service {
+        height: 300px;
+    }
+
+    .gallery-grid .gallery-item {
+        height: 300px;
+    }
 }
 @media screen and (max-width: 500px) {
-	
 
+    .rugby-wiget-contact {
+        display: none;
+    }
+
+    .rugby-header {
+        justify-content: center;
+    }
+
+    .rugby-burger {
+        position: absolute;
+        left: 0;
+    }
+
+    .rugby-featured-image {}
+
+    header.navigation {}
+
+    .rugby-widget-modern-heading {
+        width: 100%;
+        backdrop-filter: none;
+    }
+
+    .rugby-slick-item {
+        width: 100%;
+        transform: none;
+    }
+
+    .rugby-slick-item.active .rugby-image-box-img::after, .rugby-image-box-wrapper:hover .rugby-image-box-img::after {
+        top: 25px;
+    }
+
+    .rugby-parallax-section {
+        padding: 70px 15px;
+    }
+
+    .rugby-button {
+        margin-bottom: 10px;
+    }
+
+    .rugby-testimonial-content {
+        border-radius: 10px;
+        flex-direction: column-reverse;
+        padding: 15px;
+    }
+
+    .rugby-testimonial-content:before {
+        display: none;
+    }
+
+    .rugby-testimonial-box-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rugby-testimonial-box-img:after {
+        display: none;
+    }
+
+    .rugby-testimonial-box-img {
+        margin: 0 auto 10px;
+    }
+
+    .rugby-testimonial-box-title {
+        font-size: 18px;
+    }
+
+    .testimonial-item {
+        padding: 0;
+    }
+    .mb-relative {
+        position: relative !important;
+        bottom: 0 !important;
+        margin-top: 15px;
+        justify-content: flex-start;
+    }
+    
+    .rb-breadcrumb-wrap {
+        height: 250px;
+        padding-bottom: 50px;
+    }
+
+
+    .rb-breadcrumb {
+        font-size: 20px;
+    }
+    .page-title {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    .rb-category-tab {
+        flex-direction: column;
+    }
+
+    .rb-category-tab .nav-link {
+        font-size: 16px;
+    }
+
+
+    .rugby-price-list-title {
+        font-size: 16px;
+    }
+
+    .service-menu-subtitle p {font-size: 14px;}
+
+    .rugby-price-list-price {
+        font-size: 20px;
+    }
+
+    .rugby-price-list-desc {
+        font-size: 13px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(1,minmax(100px,1fr));
+    }
+
+    .gallery-grid .img-service {
+        height: 300px;
+    }
+
+    .gallery-grid .gallery-item {
+        height: 300px;
+    }
 }
