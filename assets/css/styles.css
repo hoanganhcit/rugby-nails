@@ -167,7 +167,7 @@ label {
 	z-index: 99;
 	transition: .5s;
 	padding: 25px;
-	background: rgb(0 0 0 / 41%);
+	background: rgb(0,0,0,0.2);
 	backdrop-filter: blur(6px);
 }
 .rugby-header {
@@ -1247,72 +1247,324 @@ label {
 	background: #fff;
 }
 .rugby-widget-gallery {
-    position: relative;
-    padding: 100px 15px;
+	position: relative;
+	padding: 100px 15px;
 }
 
 .gallery-content {
-    position: relative;
+	position: relative;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
-    height: 330px;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 5px solid #000;
+	position: relative;
+	overflow: hidden;
+	height: 330px;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 5px solid #000;
 }
 .gallery-item a {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .gallery-item .img-service {
-    max-height: 330px;
-    object-fit: cover;
-    transition: .3s;
+	max-height: 330px;
+	object-fit: cover;
+	transition: .3s;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .gallery-list button.slick-prev.slick-arrow {
-    left: -50px;
+	left: -50px;
 }
 
 .gallery-list button.slick-prev.slick-arrow:before {
-    background: none;
-    font-size: 30px;
+	background: none;
+	font-size: 30px;
 }
 .gallery-list button.slick-next.slick-arrow {
-    right: -50px;
+	right: -50px;
 }
 
 .gallery-list button.slick-next.slick-arrow:before {
-    background: none;
-    font-size: 30px;
+	background: none;
+	font-size: 30px;
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4,minmax(100px,1fr));
-    grid-gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(4,minmax(100px,1fr));
+	grid-gap: 10px;
 }
 
 .gallery-grid .img-service {
-    height: 450px;
-    max-height: 450px;
+	height: 450px;
+	max-height: 450px;
 }
 
 .gallery-grid .gallery-item {
-    height: 450px;
-    border: 0;
+	height: 450px;
+	border: 0;
 }
 .align-center {
-    justify-content: center;
+	justify-content: center;
+}
+
+/*Booking*/
+
+.rugby-appointments {
+	position: relative;
+	padding: 70px 15px;
+	background: url(../images/bg-cat2.png) no-repeat center;
+	background-size: cover;
+}
+.rugby-appointments:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: 0.6;
+}
+
+.rugby-appointment-content {
+	position: relative;
+}
+
+.process__booking {
+	position: relative;
+}
+
+.process__item {
+	position: relative;
+	padding-left: 50px;
+	margin-bottom: 30px;
+	padding-right: 30px;
+}
+
+.process__item:before {
+	content: "";
+	width: 1px;
+	top: 46px;
+	left: 0;
+	bottom: -36px;
+	background: #e41f7b;
+	position: absolute;
+}
+.process__item:last-child:before {
+	display: none;
+}
+.process__booking .process__item .select__item {
+	display: flex;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 15px;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	font-family: Cormorant SC;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+} 
+
+.square__before {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background: #e41f7b;
+	left: -57px;
+	top: 20px;
+}
+.square__before:before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	border: 1px solid #e41f7b;
+}
+
+.process__booking .process__item.active .select__item {
+	background: #e41f7b;
+	border-color: #e41f7b;
+}
+
+.process__booking .process__item .select__item i {
+	display: inline-flex;
+	position: absolute;
+	right: 10px;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.process__booking .process__item.active .select__item i {
+	background: #fff;
+	color: #e41f7b;
+}
+.appointment__panel {
+	border: 1px solid #e41f7b;
+	padding: 1rem;
+	position: relative;
+	color: #fff;
+	min-height: 700px;
+}
+
+.nav_category {position: relative;min-height: 670px;}
+.category__services_item {
+	width: 35%;
+	background: rgb(13 13 13 / 60%);
+	border-left: 1px solid #e41f7b;
+	border-right: 1px solid #e41f7b;
+	padding: 0 15px;
+}
+
+.service__by_cat {
+	display: none;
+	position: absolute;
+	width: calc(65% - 15px);
+	right: 0;
+	border: 1px solid #e41f7b;
+	padding: 1rem;
+	background: rgb(13 13 13 / 60%);
+	top: 0;
+	max-height: 650px;
+	overflow: auto;
+}
+.category__services_item.active .service__by_cat {
+	display: block;
+}
+.category__services_item a {
+	color: #fff !important;
+	padding: 15px;
+	display: flex;
+	border-bottom: 1px solid #b7a5a5;
+	justify-content: space-between;
+	align-items: center;
+	transition: .3s;
+}
+
+.service__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	color: #fff;
+	margin-bottom: 15px;
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.service__name {
+	display: block;
+	font-size: 14px;
+	width: calc(100% - 70px);
+}
+
+.service__item i {
+	position: absolute;
+	top: -8px;
+	right: 5px;
+	font-size: 20px;
+	display: none;
+}
+.service__item:hover {
+	border-left: 5px solid #e41f7b;
+}
+
+.service__item.selected {
+	background: #e41f7b;
+}
+
+.service__item.selected i {
+	display: block;
+}
+.title__sv {
+	display: block;
+	font-size: 16px;
+}
+
+span.desc__sv {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.service__price {
+	font-size: 20px;
+}
+
+.category__services_item:first-child {
+	border-top: 1px solid #e41f7b;
+	padding-top: 10px;
+}
+
+.category__services_item:last-child {
+	border-bottom: 1px solid #e41f7b;
+	padding-bottom: 10px;
+} 
+
+.category__services_item:last-child a {
+	border-bottom: 0;
+}
+.category__services_item a:hover {
+	background: #e41f7b;
+	border-bottom-color: #e41f7b;
+}
+.appointment__total {
+	padding: 30px 30px 30px 50px;
+	color: #fff;
+	text-align: right;
+}
+
+.app__total_item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.app__total_item label {
+}
+
+.appointment__subtotal {
+	position: relative;
+}
+
+.appointment__subtotal span {
+	border: 1px solid #fff;
+	padding: 5px 20px;
+	display: inline-flex;
+	font-size: 35px;
+	color: #e41f7b;
+	font-weight: 600;
+	background: #fff;
+}
+.next-button {
+    display: inline-flex;
+    background: #e41f7b;
+    padding: 5px 40px;
+    position: relative;
+    font-family: Cormorant SC;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF !important;
 }
