@@ -243,7 +243,7 @@
 						<p class="text-white mt-4 wow fadeInUp" data-wow-delay="0.5s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum </p>
 						<div class="mt-5 form-group">
 							<div class="row">
-								<div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
+								<div class="col-md-6 col-xs-6 col-mb-12  wow fadeInLeft" data-wow-delay="0.5s">
 									<a href="#" class="rugby-button rugby-btn">
 										<span>Our Design Set</span>
 										<span class="rugby-icon">
@@ -251,7 +251,7 @@
 										</span>
 									</a>
 								</div>
-								<div class="col-md-6 col-xs-12 wow fadeInRight" data-wow-delay="0.5s">
+								<div class="col-md-6 col-xs-6 col-mb-12 wow fadeInRight" data-wow-delay="0.5s">
 									<a href="#" class="rugby-button rugby-btn rugby-secondary">
 										<span class="rugby-icon bg-none">
 											<i class="fal fa-phone-alt"></i>
@@ -444,8 +444,13 @@
 					<div class="rugby-our-service">
 						<div class="rugby-modern-heading-description wow fadeInUp" data-wow-delay="0.5s" style="text-align: left;"><p>YOU ARE INVITED</p></div>
 						<h2 class="rugby-modern-heading-primary wow fadeInUp" data-wow-delay="0.5s" style="text-align: left;margin:0">BOOK AN<br> APPOINTMENT<br> WITH US TODAY</h2>
+<<<<<<< HEAD
 						<div class="d-flex flex-end wow fadeInUp" data-wow-delay="0.5s" style="position: absolute;bottom: 20px;right: 0">
 							<a href="booking.html" class="rugby-button rugby-btn">
+=======
+						<div class="d-flex flex-end wow fadeInUp mb-relative" data-wow-delay="0.5s" style="position: absolute;bottom: 20px;right: 0">
+							<a href="#" class="rugby-button rugby-btn">
+>>>>>>> 8da6cb48ca147775e9e7dc250f8eae28f8fc55fb
 								<span>Book Now</span>
 								<span class="rugby-icon">
 									<i class="fal fa-long-arrow-right"></i>
@@ -669,6 +674,24 @@
 				autoplaySpeed: 6000,
 				arrows: false,
 				dots: true,
+				responsive: [
+				{
+					breakpoint: 991,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				} 
+				]
 			});
 
 		});
