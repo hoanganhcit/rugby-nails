@@ -14,6 +14,14 @@
     .figure-bottom-left {
         left: -27px;
     }
+    .service__selected_datetime {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service__selected_row {
+        align-items: flex-end;
+    }
 }
 @media screen and (max-width: 1024px) {
     .rugby-widget-modern-heading {
